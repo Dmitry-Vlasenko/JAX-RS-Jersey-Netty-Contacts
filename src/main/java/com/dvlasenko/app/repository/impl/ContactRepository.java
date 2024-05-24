@@ -177,7 +177,7 @@ public class ContactRepository implements AppRepository<Contact> {
     }
 
     public Optional<List<Contact>> fetchBetweenIds(Integer from, Integer to) {
-        String hql = "FROM Contact u WHERE u.id BETWEEN :from AND :to";
+        String hql = "FROM Contact c WHERE u.id BETWEEN :from AND :to";
         try (Session session =
                      HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction;
