@@ -23,7 +23,6 @@ public class ContactService implements AppService<Contact> {
     }
 
 
-
     public Contact fetchById(Long id) {
         return repository.fetchById(id).orElse(null);
     }
